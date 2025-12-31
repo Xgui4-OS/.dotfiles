@@ -11,7 +11,8 @@
     "copyq",
     "rofi",
     "fish",
-    "starship"
+    "starship",
+    "stow"
     ],
     
     "aur" : [
