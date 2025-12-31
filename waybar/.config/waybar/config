@@ -13,11 +13,11 @@
         "memory"
     ],
     "modules-right": [
-        "tray",
         "backlight",
         "pulseaudio",
         "clock",
         "battery",
+        "tray",
         "custom/power"
     ],
     

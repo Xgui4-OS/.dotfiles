@@ -124,7 +124,9 @@ window#waybar.hidden {
 #pulseaudio,
 #battery,
 #custom-power,
-#temperature {
+#temperature,
+#clock,
+#custom-launcher{
     background: rgba(49, 50, 68, 0.8);
     border-radius: 10px;
     margin: 2px 2px;
@@ -153,11 +155,12 @@ window#waybar.hidden {
 #backlight:hover,
 #pulseaudio:hover,
 #battery:hover,
-#temperature:hover {
+#temperature:hover,
+#clock:hover,
+#custom-launcher:hover {
     background: linear-gradient(135deg, rgba(166, 227, 161, 0.2), rgba(148, 226, 213, 0.2));
     border-color: rgba(166, 227, 161, 0.4);
 }
-
 
 #cpu {
     color: #fab387;
