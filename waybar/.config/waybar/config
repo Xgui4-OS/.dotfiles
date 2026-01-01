@@ -125,7 +125,6 @@
         "format-alt": "{icon} {time}",
         "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
-
     "custom/notification": {
     "escape": true,
     "exec": "swaync-client -swb",
