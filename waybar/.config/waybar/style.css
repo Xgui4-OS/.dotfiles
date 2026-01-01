@@ -126,7 +126,8 @@ window#waybar.hidden {
 #custom-power,
 #temperature,
 #clock,
-#custom-launcher{
+#custom-launcher, 
+#custom-notification{
     background: rgba(49, 50, 68, 0.8);
     border-radius: 10px;
     margin: 2px 2px;
@@ -157,7 +158,8 @@ window#waybar.hidden {
 #battery:hover,
 #temperature:hover,
 #clock:hover,
-#custom-launcher:hover {
+#custom-launcher:hover
+#custom-notification:hover {
     background: linear-gradient(135deg, rgba(166, 227, 161, 0.2), rgba(148, 226, 213, 0.2));
     border-color: rgba(166, 227, 161, 0.4);
 }
