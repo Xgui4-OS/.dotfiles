@@ -5,8 +5,7 @@ echo "Xgui4 OS Dotfiles Installer - Prototype 2 Version"
 echo "List of Operating System available?"
 
 echo "1. Arch based OS"
-
-echo 2. 
+echo "2. FreeBSD"
 
 read -o -p 'What is your Operating System??' operating_system
 
@@ -56,7 +55,7 @@ if $operating_system == "1"; then
 fi
 
 else 
-   echo "WARNING: this script is a work in progress and have not being tested"
+  echo "WARNING: this script is a work in progress and have not being tested"
 
   echo "Do you want to install an X11 Server for an X11 Window Manager?"
 
@@ -66,24 +65,12 @@ else
   fi
 
   # Define the JSON file
-  eseential="freebsd/freebsd-essential-pkg.json"
-  I3="arch/i3-setup.json"
+  ESSENTIAL="freebsd/freebsd-essential-pkg.json"
+  I3="freebsd/i3-setup.json"
 
-  packages=($(jq -r '.pacman[]' "$es"))
-  sudo pacman -S ${packages[@]}
+  packages=($(jq -r '.pacman[]' "$ESSENTIAL"))
+  sudo pkg install ${packages[@]}
 
   packages=($(jq -r '.pacman[]' "$I3"))
-  sudo pacman -S ${packages[@]}
-
-  packages=($(jq -r '.pacman[]' "$HYPRARCH"))
-  sudo pacman -S ${packages[@]}
-
-  aur=($(jq -r '.aur[]' "$HYPRARCH"))
-  yay -S ${aur[@]}
-
-  packages=($(jq -r '.pacman[]' "$QTILE"))
-  sudp pacman -S ${packages[@]}
-
-  aur=($(jq -r '.aur[]' "$QTILE"))
-  yay -S ${aur[@]}
-fi 
+  sudo pkg install ${packages[@]}
+fi
