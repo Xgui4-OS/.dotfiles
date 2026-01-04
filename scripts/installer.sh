@@ -32,25 +32,25 @@ if $operating_system == "1"; then
   QTILE="arch/qtile-setup.json"
 
   packages=($(jq -r '.pacman[]' "$ARCH"))
-  sudo pacman -S ${packages[@]}
+  sudo pacman -S --noconfirm ${packages[@]}
 
   aur=($(jq -r '.aur[]' "$ARCH"))
-  yay -S ${aur[@]}
+  yay -S --needed --noconfirm ${aur[@]}
 
   packages=($(jq -r '.pacman[]' "$I3"))
-  sudo pacman -S ${packages[@]}
+  sudo pacman -S --needed --noconfirm ${packages[@]}
 
   packages=($(jq -r '.pacman[]' "$HYPRARCH"))
-  sudo pacman -S ${packages[@]}
+  sudo pacman -S --needed --noconfirm ${packages[@]}
 
   aur=($(jq -r '.aur[]' "$HYPRARCH"))
-  yay -S ${aur[@]}
+  yay -S --needed --noconfirm ${aur[@]}
 
   packages=($(jq -r '.pacman[]' "$QTILE"))
-  sudp pacman -S ${packages[@]}
+  sudp pacman -S --needed --noconfirm ${packages[@]}
 
   aur=($(jq -r '.aur[]' "$QTILE"))
-  yay -S ${aur[@]}
+  yay -S --needed --noconfirm ${aur[@]}
 
 fi
 
@@ -61,7 +61,7 @@ else
 
   read -o -p 'Do you want to install an X11 Server for an X11 Window Manager? (Y/N)' confirm_x11
   if [[ $confirm_x11 == "Y" || $confirm_x11 == "y" ]]; then
-    sudo pkg install xorg-server
+    sudo pkg install -y xorg-server
   fi
 
   # Define the JSON file
@@ -69,8 +69,8 @@ else
   I3="freebsd/i3-setup.json"
 
   packages=($(jq -r '.pacman[]' "$ESSENTIAL"))
-  sudo pkg install ${packages[@]}
+  sudo pkg install -y ${packages[@]}
 
   packages=($(jq -r '.pacman[]' "$I3"))
-  sudo pkg install ${packages[@]}
+  sudo pkg install -y ${packages[@]}
 fi
