@@ -1,9 +1,13 @@
-/*Dracula theme based on the Purple official rofi theme*/
+/*
+    Configuration based on : 
+    Dracula theme based on the Purple official rofi theme
+*/
 
 configuration {
     show-icons:      true;
     display-drun:    "";
     disable-history: false;
+    modes: [drun, run, window, "powermenu:~/.dotfiles/rofi/.config/rofi/rofi-power-menu"];
 }
 
 * {
