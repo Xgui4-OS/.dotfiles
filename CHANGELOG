@@ -8,6 +8,7 @@
   - BSD Support
 - Will tested in on BSD
 - Focus on BSD
+- Remove index.theme , since it is a wrriten by nwg-look, but added a index.default.theme to add index.default.theme to create it. 
 
 ## Protoype 2 - 2026-01-9
 
