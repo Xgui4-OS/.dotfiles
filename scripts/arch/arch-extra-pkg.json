@@ -1,5 +1,7 @@
 {
+    "pacman" : [
+        "kvantum"
+    ],
     "aur" : [
-        "hyprls-git"
-    ]
+        "hyprls-git"    ]
 }
