@@ -1,21 +1,23 @@
 #!/bin/sh
 
-echo "WARNING: this script is a work in progress and have not being tested"
 
-printf "Do you want to continue? (Y/N)"
-read -r continue
+# 1. Initialization and Safety
+echo "WARNING: work in progress"
+printf "Do you want to continue? (Y/N) "
+read -r response
 
-if [ $continue -ne Y ]; then
-  exit("User have decided to not continue")
+if [ "$response" != "Y" ] && [ "$response" != "y" ]; then
+  echo "Exiting..."
+  exit 1
 fi
 
 echo "Xgui4 OS Dotfiles Installer - Prototype 2 Version"
 
 echo "Preparing the gtk and icons theme" 
 
-touch gtk/.gtkrc
+touch gtk/.gtkrc-2.0
 
-cat gtk/.gtkrc-pre-defned > gtk/.gtkrc
+cat gtk/.gtkrc-2.0-pre-defned > gtk/.gtkrc-2.0
 
 touch gtk/.icons/default/icon.theme
 
@@ -54,7 +56,7 @@ if [ $operating_system = "1" ]; then
   read -r user_input
 
   if [ user_input = "yes" ] || [ user_input = "Yes" ]; then
-    $i3_choosen = 1
+    i3_choosen=1
   fi 
 
   if [ $operating_system = "1"]; then 
@@ -62,21 +64,21 @@ if [ $operating_system = "1" ]; then
     read -r user_input
 
     if [ user_input = "yes" ] || [ user_input = "Yes" ]; then
-      $qtile_choosen = 1
+    qtile_choosen=1
     fi 
 
     printf "Do you want to install Hyprland ?"
     read -r user_input
 
     if [ user_input = "yes" ] || [ user_input = "Yes" ]; then
-      $hyprland_choosen = 1
+      hyprland_choosen=1
     fi 
 
     printf "Do you want to install spectrwm ?"
     read -r user_input
 
     if [ user_input = "yes" ] || [ user_input = "Yes" ]; then
-      $spectrwm_choosen = 1
+      spectrwm_choosen=1
     fi 
   fi
 
@@ -134,7 +136,7 @@ fi
 else 
   printf "Do you want to install an X11 Server for an X11 Window Manager? (Y/N)")
   read -r confirm_x11
-  if [ $confirm_x11 = "Y"] || [$confirm_x11 = "y" ]; then
+  if [ $confirm_x11 = "Y"] || [ $confirm_x11 = "y" ]; then
     sudo pkg install -y xorg-server
   fi
 
