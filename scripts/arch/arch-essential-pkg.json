@@ -12,7 +12,7 @@
     "copyq",
     "rofi",
     "fish",
-    "starship",
+    "starship"
     ],
     "aur" : [
     "qt5c-kde",
