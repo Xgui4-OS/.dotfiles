@@ -1,6 +1,20 @@
 # CHANGELOG
 
-## Each line correspeond to a pull request to the master branch (no date -> not yet merged/created : still in dev branch)
+## BSD-Patch (bsd-branch) - January 13
+
+- Removed obselete `bsd.dockerfile`  
+- Updated the Readme file 
+- Removed old obselete info in Changelog
+- Added more patch for i3 for GhostBSD
+- Added important software in the .json file
+- Added env variable for BSD in .profile 
+- Removed libinput-gestures and autiliting for i3 since BSD do not support it
+- Removed Arch related files from the installer since this branh is not compatible with GNU/Linux
+- Updated the installer to add a placeholder message, i plan to add a mechanism to change the branch
+
+## BSD-Patch (bsd-branch) - January 12
+
+- Modified and fix Polybar and i3 for GhostBSD
 
 ## BSD-Tested - January 11
 

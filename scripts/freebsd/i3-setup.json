@@ -2,6 +2,7 @@
   "pkg": [
     "i3",
     "polybar",
-    "i3lock-color"
+    "i3lock-color",
+    "i3-status"
   ]
 }

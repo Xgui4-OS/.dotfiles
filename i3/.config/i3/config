@@ -21,9 +21,9 @@ exec_always feh --bg-fill ~/.dotfiles/wallpapers/wallpaper-cirno1.jpeg
 
 # launch polybar
 exec_always --no-startup-id killall -q
-exec_always --no-startup-id ~/.dotfles/i3/.config/polybar/launch.sh
+exec_always --no-startup-id ~/.dotfiles/i3/.config/polybar/launch.sh
 
-# launch copy
+# launch copyq
 exec copyq
 
 # launch flameshot
@@ -31,9 +31,7 @@ exec flameshot
 
 # start i3 components
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-# exec --no-startup-id nm-applet
-# exec --no-startup-id blueman-applet
-exec --no-startup-id autotiling
+exec --no-startup-id networkmgr
 
 ### Shortcuts ###
 floating_modifier $mod
@@ -99,14 +97,10 @@ bindsym $mod+r exec "rofi -show run"
 bindsym $mod+w exec "rofi -show window"
 bindsym $mod+x exec "rofi -show powermenu"
 # bindsym $mod+y exec "bash ~/.local/bin/ytdl-mpv"
-# bindsym $mod+p exec "~/.dotfiles/rofi/.config/rofi/rofi-mpris"
-# bindsym $mod+dot exec ""
+bindsym $mod+p exec "~/.dotfiles/rofi/.config/rofi/rofi-mpris"
 bindsym $mod+n exec "firefox"
 
 # windows rule
-# for_window [class="Microsoft Visual Studio 2022"] floating enable
-# for_window [class="Microsoft Edge"] floating enable
-# for_window [class="File Explorer"] floating enable
 
 # dolphin
 bindsym $mod+e exec "dolphin"

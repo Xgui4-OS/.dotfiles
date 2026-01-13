@@ -30,7 +30,7 @@ printf "What is your Operating System?"
 read -r operating_system
 
 if [ "$operating_system" = "1" ]; then 
-  exec "$HOME/.dotfiles/scripts/arch-installer"
+  echo "This branch is not compatible with Arch GNU/Linux"
 else 
   exec "$HOME/.dotfiles/scripts/freebsd-installer"
 fi
