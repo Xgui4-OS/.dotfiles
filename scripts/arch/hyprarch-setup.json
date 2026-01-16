@@ -5,7 +5,8 @@
     "hyprpaper",
     "hyprlock",
     "hypridle",
-    "hyprshot"
+    "hyprshot",
+    "swayosd"
     ],
     "aur" : [
         "hyprshell"
