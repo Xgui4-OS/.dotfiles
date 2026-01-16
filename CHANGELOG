@@ -6,7 +6,10 @@
 - Removed Hyprland related file since it is not ready on FreeBSD
 - Added the start of Kvantum support
 - Update the list for FreeBSD
-- Fix BSD support for Fastfetcht
+- Fix BSD support for Fastfetch
+- more fix for freebsd
+- new fastfetch image 
+- better bash
 
 ## BSD-Patch (bsd-branch) - January 13 - 11:05
 
