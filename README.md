@@ -1,4 +1,4 @@
-# Xgui4 OS Dotfiles
+# Xgui4 OS Dotfiles For Linux-Based Systems
 
 > [!NOTE]
 > This branch is my personal config who change often for stability the xgui4-os/.dotfiles is prefered or a other dotfiles made for daily use.

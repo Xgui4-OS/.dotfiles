@@ -12,7 +12,8 @@
     "copyq",
     "rofi",
     "fish",
-    "starship"
+    "starship",
+    "nerd-fonts"
     ],
     "aur" : [
     "qt5c-kde",
