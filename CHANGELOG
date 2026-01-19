@@ -1,6 +1,10 @@
 # CHANGELOG
 
-## BSD-Patch (bsd-branch) 
+## 2026/01/19 (bsd-branch) - 15:30
+- Update Fastfetch with information about the dotfiles
+- Updated the VERSION file for better display
+
+## BSD-Patch (bsd-branch) - January 19 - 15:00
 
 - Removed others Linux-related file
 - Removed Hyprland related file since it is not ready on FreeBSD
