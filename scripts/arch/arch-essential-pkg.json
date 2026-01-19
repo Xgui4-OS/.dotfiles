@@ -13,6 +13,7 @@
     "rofi",
     "fish",
     "starship",
+    "nerd-fonts"
     ],
     "aur" : [
     "qt5c-kde",

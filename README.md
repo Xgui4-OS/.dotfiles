@@ -1,4 +1,4 @@
-# Xgui4 OS Dotfiles
+# Xgui4 OS Dotfiles For Linux-Based Systems
 
 > [!NOTE]
 > This branch is my personal config who change often for stability the xgui4-os/.dotfiles is prefered or a other dotfiles made for daily use.
@@ -28,3 +28,11 @@ My dotfiles of my GNU/Linux System, including HyprArch (my hyprland setup) and i
 git pull
 
 ```
+
+### How to Test/Debug
+
+1. Install Docker
+2. Run `docker buildn -t install.sh .`
+3. Run `docker run -it install.sh .`
+4. Run `docker commit <container_id> my-debug-image`
+5. Run `docker run -it my-debug-image /bin/bash`
