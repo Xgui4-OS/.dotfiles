@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2026/01/19 (dev branch) - 16:00
+
+- Backported more changes from the bsd branch like for fastfetch, startship and the VERSION file
+
 ## Seperared from BSD - January 19 
 
 - This branch is separated from the bsd branch due to difference between Linux and BSD

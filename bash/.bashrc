@@ -1,3 +1,4 @@
+#!/use/bin/env bash
 #
 # ~/.bashrc
 #
@@ -9,7 +10,11 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
-eval "$(oh-my-posh init bash)"
+current_tty=$(tty)
+
+if [[ $current_tty == /dev/pts* ]]; then
+  eval "$(starship init bash)"
+fi
 
 alias fastfetch-image='fastfetch -c ~/.config/fastfetch/config-image.jsonc'
 alias i-use-arch-btw='fastfetch -c ~/.config/fastfetch/config-image.jsonc --logo arch'

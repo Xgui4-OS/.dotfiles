@@ -50,6 +50,12 @@
             "keyColor": "38;2;252;148;3"
         },
         {
+            "type": "command",
+            "key": "Dotfiles",                       
+            "text": "cat ~/.dotfiles/VERSION",                           
+            "keyColor": "38;2;252;148;3"
+        },
+        {
             "type": "wmTheme",
             "keyColor": "38;2;252;148;3"
         },
