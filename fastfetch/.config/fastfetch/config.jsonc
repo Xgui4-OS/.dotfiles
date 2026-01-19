@@ -15,7 +15,7 @@
         "break",
         {
             "type": "title",
-            "keyWidth": 10,
+            "keyWidth": 10
         },
         {
             "type":"host",
@@ -23,51 +23,55 @@
         },
         {
             "type": "os",
-            "keyColor": "magenta",
+            "keyColor": "magenta"
         },
         {
             "type": "kernel",
-            "keyColor": "blue",
+            "keyColor": "blue"
         },
         {
             "type": "packages",
-            "keyColor": "light_blue",
+            "keyColor": "light_blue"
         },
         {
             "type": "shell",
-            "keyColor": "green",
+            "keyColor": "green"
         },
         {
             "type": "terminal",
-            "keyColor": "yellow",
+            "keyColor": "yellow"
         },
         {
             "type": "wm",
-            "keyColor": "38;2;252;148;3",
+            "keyColor": "38;2;252;148;3"
         },
         {
             "type": "Theme",
-            "keyColor": "38;2;252;148;3",
+            "keyColor": "38;2;252;148;3"
+        },
+        {
+            "type": "wmTheme",
+            "keyColor": "38;2;252;148;3"
         },
         {
             "type": "de",
-            "keyColor": "38;2;252;148;3",
+            "keyColor": "38;2;252;148;3"
         },
         {
             "type": "cursor",
-            "keyColor": "red",
+            "keyColor": "red"
         },
         {
             "type": "terminalfont",
-            "keyColor": "magenta",
+            "keyColor": "magenta"
         },
         {
             "type": "uptime",
-            "keyColor": "blue",
+            "keyColor": "blue"
         },
         {
             "type": "media",
-            "keyColor": "light_blue",
+            "keyColor": "light_blue"
         },
         {
            "type": "cpu",
@@ -79,12 +83,12 @@
         },
         {
             "type": "memory",
-            "key": " RAM:",
+            "key": "RAM:",
             "keyColor": "38;2;252;148;3"
         },
         {
             "type": "swap",
-            "key": " Swap:",
+            "key": "Swap:",
             "keyColor": "38;2;252;148;3"
         },
         {

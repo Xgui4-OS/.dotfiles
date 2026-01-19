@@ -1,4 +1,4 @@
-# Xgui4 OS Dotfiles
+# Xgui4 OS Dotfiles For Linux-Based Systems
 
 My dotfiles of my GNU/Linux System, including HyprArch (my hyprland setup) and i3wm and qtile config and terminal config and a work in progress installer.
 
@@ -25,3 +25,11 @@ My dotfiles of my GNU/Linux System, including HyprArch (my hyprland setup) and i
 git pull
 
 ```
+
+### How to Test/Debug
+
+1. Install Docker
+2. Run `docker buildn -t install.sh .`
+3. Run `docker run -it install.sh .`
+4. Run `docker commit <container_id> my-debug-image`
+5. Run `docker run -it my-debug-image /bin/bash`

@@ -1,6 +1,42 @@
 # CHANGELOG
 
-## Protoype 2
+## Seperared from BSD - January 19 
+
+- This branch is separated from the bsd branch due to difference between Linux and BSD
+- BSD support is now on the bsd branch
+- Updated the readme to reflect the changes
+- removed `monitors.conf` since it is created by nwg-display
+- removed some env that are now handled by nwg-look
+- updated some Hyprland config 
+- removed files/scripts related to BSD
+- backported some changes from the bsd branch like for fastfetch 
+- removed some unneeded files
+- updated waybar config for more colors
+- added a exemple of `monitors.conf` for Hyprland
+- added `nerd-fonts` meta-package to the arch essentials software list for the installer
+
+## BSD-Tested - January 11
+
+- Renamed `.install` to `install.sh`
+- Added `dockerfile` and `bsd.dockerfile` (WIP) for testing
+- Fixed a lot of logic error
+- Added yay (for Arch Only) and jq in the installer
+- Temporaly remove
+- Add SwayOSD to Hyprland
+- Added documentation for dockerfile, and how to use it
+
+## BSD-Tested - January 10
+
+- Experiments
+  - BSD Support
+- Will tested in on BSD
+- Focus on BSD
+- Remove `index.theme` , since it is a wrriten by nwg-look, but added a `index.default.theme` to add `index.default.theme` to create it.
+- Make the scripts POISX compatible for better BSD support (no longer requiring BASH) and now SH instead of BASH
+- Now `save-rice.sh` is now `save-toolkit-theme.sh`and now longer does the sh
+- Added `install.sh` (was `.install` in January 10) installer wrapper with safety feature
+
+## Protoype 2 - 2026-01-9
 
 - Experiment with
   - X11 Windows Managers
@@ -21,3 +57,4 @@
 - Added `save-ricing.sh` to save ricing
 - Added xsettings setting
 - Added icons setting
+- Started the `CHANGELOG` file
