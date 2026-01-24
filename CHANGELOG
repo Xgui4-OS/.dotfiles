@@ -1,20 +1,24 @@
 # CHANGELOG
 
+## Big Merge - Janurary 24
+
+- See merges info
+
 ## 2026/01/19 (dev branch) - 16:00
 
 - Backported more changes from the bsd branch like for fastfetch, startship, bashrc and the VERSION file
-- (in a second commit) , added a bashrc file to the list of change and fixed a fastfetch widhth and height issue backported from the bsd branch 
+- (in a second commit) , added a bashrc file to the list of change and fixed a fastfetch widhth and height issue backported from the bsd branch
 
-## Seperared from BSD - January 19 
+## Seperared from BSD - January 19
 
 - This branch is separated from the bsd branch due to difference between Linux and BSD
 - BSD support is now on the bsd branch
 - Updated the readme to reflect the changes
 - removed `monitors.conf` since it is created by nwg-display
 - removed some env that are now handled by nwg-look
-- updated some Hyprland config 
+- updated some Hyprland config
 - removed files/scripts related to BSD
-- backported some changes from the bsd branch like for fastfetch 
+- backported some changes from the bsd branch like for fastfetch
 - removed some unneeded files
 - updated waybar config for more colors
 - added a exemple of `monitors.conf` for Hyprland
