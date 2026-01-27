@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Separed the caelestia-shell to a separate github repo (which is a fork of caelestia-dos/shell)
+
+Now live at [xgui4:caelestia-shell](https://github.com/xgui4/caelestia-shell)
+
 ## Add new Experimental Caelestia Session - January 26
 
 - Add a new caelestia shell desktop entry with caelestia specific pathch
