@@ -10,3 +10,7 @@ scripts/arch/personals-pkg.json
 **build/
 
 **.github/
+**.github/
+
+# external repo module 
+quickshell/.config/quickshell/shell

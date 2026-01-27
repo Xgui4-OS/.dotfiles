@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Multiples changes
+
+- Remove screenshots from the main repo since it is no longer on this repo 
+
 ## Separed the caelestia-shell to a separate github repo (which is a fork of caelestia-dos/shell)
 
 Now live at [xgui4:caelestia-shell](https://github.com/xgui4/caelestia-shell)
