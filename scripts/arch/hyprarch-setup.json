@@ -9,6 +9,7 @@
     "swayosd"
     ],
     "aur" : [
+        "quickshell",
         "hyprshell"
     ]
 }

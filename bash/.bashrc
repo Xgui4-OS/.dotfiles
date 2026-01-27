@@ -20,3 +20,5 @@ alias fastfetch-image='fastfetch -c ~/.config/fastfetch/config-image.jsonc'
 alias i-use-arch-btw='fastfetch -c ~/.config/fastfetch/config-image.jsonc --logo arch'
 alias wkill='hyprctl kill'
 alias neofetch='fastfetch -c neofetch'
+
+eval "$(bat --completion bash)"

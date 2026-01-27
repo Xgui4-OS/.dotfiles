@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## Better Shells Experience Tests With FreeBSD Branch Backported changes - January 25 2026 - 21h00
+
+- Added completions for Fish and Bash for bat
+- Backported changed from the FreeBSD branch to this branch for the starship
+- Barported the dotfiles tools from FreeBSD
+- Updated the `.profile` file
+- Fixed the waybar config
+- Added Quickshell and new overview feature with Quickshell
+
 ## Better Shells Experience Tests - January 25 2026 - 18h25
 
 - Added Exa, Ugrep, Bat and replace by default their coreutils command and replace their command with alias with a g in the fish shell

@@ -12,6 +12,8 @@ if status is-interactive
     alias gls="/usr/bin/ls"
     alias grep="ugrep"
     alias ggrep="/usr/bin/grep"
+
+    bat --completion fish | source
 end
 
 function mkcd --description "Create a directory and cd into it"
