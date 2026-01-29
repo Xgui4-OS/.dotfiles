@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Minor changes - 28 January 
+
+Make bigger gap for hyprland
+
+Add a file for the future Xgui4 OS Shell
+
 ## Minor Changes - 27 january 2026 - 10:32
 
 Add alias for icat in fish config and create get-shell script for caelestia-shell installation
