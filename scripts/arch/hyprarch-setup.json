@@ -6,16 +6,7 @@
     "hyprlock",
     "hypridle",
     "hyprshot",
-    "swayosd",
-    "libqalculate",
-    "aubio",
-    "cava",
-    "ttf-material-symbols-variable",
-    "ddcutil",
-    "app2unit",
-    "brightnessctl",
-    "lm_sensors",
-    "swappy"
+    "swayosd"
     ],
     "aur" : [
         "quickshell-git",

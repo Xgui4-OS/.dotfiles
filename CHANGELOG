@@ -1,6 +1,15 @@
 # CHANGELOG
 
-## Minor changes - 28 January 
+## Update the installer - Febraury 1 2026
+
+- Update and fix the installer script
+- Add the missing packages for the installer json files
+
+## Fixes Hyprpaper - February 1 2026
+
+- Fix hyprpaper config for including more monitors setups
+
+## Minor changes - 28 January 2026
 
 Make bigger gap for hyprland
 
