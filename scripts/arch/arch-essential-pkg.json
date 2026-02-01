@@ -1,25 +1,26 @@
 {
     "pacman" :[
-    "stow",
-    "dolphin",
-    "picom",
-    "kitty",
-    "fastfetch",
-    "flameshot",
-    "nwg-look",
-    "network-manager-applet",
-    "blueman-manager",
-    "copyq",
-    "rofi",
-    "fish",
-    "starship",
-    "nerd-fonts",
-    "exa",
-    "ugrep",
-    "bat"
+        "stow",
+        "dolphin",
+        "picom",
+        "kitty",
+        "fastfetch",
+        "flameshot",
+        "nwg-look",
+        "network-manager-applet",
+        "blueman-manager",
+        "copyq",
+        "rofi",
+        "fish",
+        "starship",
+        "nerd-fonts",
+        "exa",
+        "ugrep",
+        "bat",
+        "brightnessctl"
     ],
     "aur" : [
-    "qt5c-kde",
-    "qt6c-kde"
+        "qt5c-kde",
+        "qt6c-kde"
     ]
 }

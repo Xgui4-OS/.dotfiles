@@ -82,40 +82,59 @@ aur=$(jq -r '.aur[]' "$ARCH")
 yay -S --needed --noconfirm "$aur"
 
 if [ "$i3_choosen" = 1 ]; then
-packages=$(jq -r '.pacman[]' "$I3")
-sudo pacman -S --needed --noconfirm "$packages"
+    packages=$(jq -r '.pacman[]' "$I3")
+    sudo pacman -S --needed --noconfirm "$packages"
 fi
 
 if [ "$hyprland_choosen" = 1 ]; then
-packages=$(jq -r '.pacman[]' "$HYPRARCH")
-sudo pacman -S --needed --noconfirm "$packages"
-aur=$(jq -r '.aur[]' "$HYPRARCH")
-yay -S --needed --noconfirm "$aur"
+    packages=$(jq -r '.pacman[]' "$HYPRARCH")
+    sudo pacman -S --needed --noconfirm "$packages"
+    aur=$(jq -r '.aur[]' "$HYPRARCH")
+    yay -S --needed --noconfirm "$aur"
 fi
 
 if [ "$qtile_choosen" = 1 ]; then
-packages=$(jq -r '.pacman[]' "$QTILE")
-sudo pacman -S --needed --noconfirm "$packages"
-aur=$(jq -r '.aur[]' "$QTILE")
-yay -S --needed --noconfirm "$aur"
+    packages=$(jq -r '.pacman[]' "$QTILE")
+    sudo pacman -S --needed --noconfirm "$packages"
+    aur=$(jq -r '.aur[]' "$QTILE")
+    yay -S --needed --noconfirm "$aur"
 fi
 
 cd "$HOME/.dotfiles"
 
 if [ "$qtile_choosen" = 1 ]; then 
-stow --adopt qtile
+    stow --adopt qtile
 fi
 
 if [ "$hyprland_choosen" = 1 ]; then 
-stow --adopt hyprland waybar hyprshell 
+    stow --adopt hyprland 
+    stow --adopt waybar 
+    stow --adopt hyprshell 
+    stow --adopt caelestia 
+    stow --adopt quickshell
 fi
 
 if [ "$i3_choosen" = 1 ]; then 
-stow --adopt i3 polybar 
+    stow --adopt i3 
+    stow --adopt polybar 
+    stow --adopt picom 
 fi
 
 if [ "$spectrwm_choosen" = 1 ]; then 
-stow spectrwm
+    stow  --adopt spectrwm
 fi
 
-stow --adopt bash fastfetch fish gtk kitty libinput-gestures kitty picom qt rofi starship wallpapers xsettings
+stow --adopt bash 
+stow --adopt fastfetch 
+stow --adopt fish 
+stow --adopt gtk 
+stow --adopt kitty 
+stow --adopt libinput-gestures 
+stow --adopt kitty 
+stow --adopt qt 
+stow --adopt rofi 
+stow --adopt starship 
+stow --adopt wallpapers 
+stow --adopt xsettings
+stow --adopt flameshot
+stow --adopt account-profile
