@@ -1,4 +1,4 @@
-#!/use/bin/env bash
+# shellcheck disable=SC2148
 #
 # ~/.bashrc
 #

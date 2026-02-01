@@ -5,6 +5,18 @@
 
 My dotfiles of my GNU/Linux System, including HyprArch (my hyprland setup) and i3wm and qtile config and terminal config and a work in progress installer.
 
+## Screenshots
+
+# Caelestia Shell Setup
+![Caelestia Setup](screenshot/caelestia/caelestia.png)
+![Caelestia Bar Setup](screenshot/caelestia/caelestia-bar.png)
+
+# Hyprland Setup (will be updated soon)
+![Hyprland Setup](screenshot/hyprland/hyprland.png)
+![Hyprland Setup image 2](screenshot/hyprland/hyprland-1.png)
+
+### Mores screenshots coming soon...
+
 ## How to use
 
 ### to install the dotfiles
