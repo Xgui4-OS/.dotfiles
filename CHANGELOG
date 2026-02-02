@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## Begin the Artix patches/version - February 3
+
+- Added a WIP (is a copy of the arch folder so some package might not exist, will fix those soon) artix folder to add folder/repo for Artix Linux
+- Modified the .bash_profile to some fixes for Artix Linux
+- Add a small fix for the caelestia setup scripts
+- Add some packaeges to Arch and Artix
+
 ## Better Themings - February 1 2026
 
 - Update the scripts and moved them to a `scripts` folder

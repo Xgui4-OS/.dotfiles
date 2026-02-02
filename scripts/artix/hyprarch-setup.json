@@ -6,12 +6,12 @@
         "hyprlock",
         "hypridle",
         "hyprshot",
-        "swayosd",
         "hyprpolkitagent"
     ],
     "aur" : [
         "quickshell-git",
         "hyprshell",
-        "caelestia-cli"
+        "caelestia-cli",
+        "swayosd-gi"
     ]
 }

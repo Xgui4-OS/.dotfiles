@@ -1,0 +1,26 @@
+{
+    "pacman" :[
+        "stow",
+        "dolphin",
+        "picom",
+        "kitty",
+        "fastfetch",
+        "flameshot",
+        "nwg-look",
+        "network-manager-applet",
+        "blueman-manager",
+        "copyq",
+        "rofi",
+        "fish",
+        "starship",
+        "nerd-fonts",
+        "exa",
+        "bat",
+        "brightnessctl"
+    ],
+    "aur" : [
+        "qt5c-kde",
+        "qt6c-kde",
+        "ugrep-git"
+    ]
+}
