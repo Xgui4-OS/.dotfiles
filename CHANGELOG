@@ -1,5 +1,7 @@
 # CHANGELOG
 
+## Add a icon for file manager
+
 ## Begin the Artix patches/version - February 3
 
 - Added a WIP (is a copy of the arch folder so some package might not exist, will fix those soon) artix folder to add folder/repo for Artix Linux
