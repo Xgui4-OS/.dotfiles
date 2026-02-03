@@ -7,7 +7,8 @@
         "hypridle",
         "hyprshot",
         "swayosd",
-        "hyprpolkitagent"
+        "hyprpolkitagent",
+        "swaync"
     ],
     "aur" : [
         "quickshell-git",

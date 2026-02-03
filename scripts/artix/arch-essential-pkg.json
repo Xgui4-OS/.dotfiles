@@ -1,5 +1,7 @@
 {
     "pacman" :[
+        "git",
+        "base-devel",
         "stow",
         "dolphin",
         "picom",
@@ -7,16 +9,18 @@
         "fastfetch",
         "flameshot",
         "nwg-look",
-        "network-manager-applet",
-        "blueman-manager",
         "copyq",
         "rofi",
         "fish",
         "starship",
         "nerd-fonts",
-        "exa",
+        "eza",
         "bat",
-        "brightnessctl"
+        "brightnessctl",
+        "cpio",
+        "pkg-config",
+        "gcc",
+        "breeze"
     ],
     "aur" : [
         "qt5c-kde",

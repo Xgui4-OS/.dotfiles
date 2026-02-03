@@ -6,7 +6,8 @@
         "hyprlock",
         "hypridle",
         "hyprshot",
-        "hyprpolkitagent"
+        "hyprpolkitagent",
+        "swaync"
     ],
     "aur" : [
         "quickshell-git",
