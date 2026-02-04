@@ -17,7 +17,8 @@ fi
 # serial line.
 # TERM=xterm; 	export TERM
 
-EDITOR='code-oss';   	export EDITOR
+VISUAL=code-oss; export VISUAL
+EDITOR=nano;   	export EDITOR
 PAGER=less;  	export PAGER
 
 # set ENV to a file invoked each time sh is started for interactive use.

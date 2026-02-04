@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Backup du jour - 3 feb
+
+- .profile mis a jour
+- ajout du mate
+
 ## 2026/01/20 (bsd-branch) - 17:00
 - Remove docker file since docker is not native to BSD
 - Updated the readme with wip info and remove info about docker 
