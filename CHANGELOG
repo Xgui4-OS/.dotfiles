@@ -4,6 +4,8 @@
 
 - .profile mis a jour
 - ajout du mate
+- dump du dconf de gnome
+
 
 ## 2026/01/20 (bsd-branch) - 17:00
 - Remove docker file since docker is not native to BSD
