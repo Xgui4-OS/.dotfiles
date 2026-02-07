@@ -1,6 +1,7 @@
 # Documentation: https://i3wm.org/docs/userguide.html
 # Config created by Keyitdev https://www.github.com/keyitdev/dotfiles
 # Copyright (C) 2022 Keyitdev
+# Modified by Xgui4 https://www.github.com/xgui4/.dotfiles
 
 # set mod
 set $mod Mod4
@@ -80,7 +81,7 @@ bindsym $mod+n exec "firefox"
 # dolphin
 bindsym $mod+e exec "env -u DESKTOP_AUTOSTART_ID caja --no-desktop --browser"
 
-# take a screenshot
+# take a screenshots
 bindsym Pause exec screenshot -sa
 bindsym Print exec screenshot -sf
 
