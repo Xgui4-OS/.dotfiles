@@ -129,7 +129,7 @@ format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 [dotnet]
 disabled = false
 symbol = ""
-detect_extensions = [ "csproj", "fsproj", "xproj", ".sln", ".sln" ]
+detect_extensions = [ ".csproj", ".fsproj", ".xproj", ".sln", ".sln" ]
 detect_files = ['global.json', 'project.json', 'Directory.Build.props', 'Directory.Build.targets', 'Packages.props']
 heuristic = false
 style = "bg:green"
@@ -138,9 +138,8 @@ format = '[[ $symbol( $version) (target $tfm ) ](fg:crust bg:green)]($style)'
 [cpp]
 disabled = false
 symbol = ""
-detect_files = ['cpp', 'cc', 'cxx', 'c++', 'hpp', 'hh', 'hxx', 'h++', 'tcc']
 style = "bg:green"
-format = '[[ $symbol( $version) ]](fg:crust bg:green)]($style)'
+format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 
 [rust]
 disabled = false
