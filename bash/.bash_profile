@@ -12,6 +12,8 @@ if [ "$XDG_SESSION_TYPE" = "x11" ]; then
    export XDG_MENU_PREFIX=arch
 fi
 
+export PATH=$HOME/.config/emacs/bin:$PATH
+
 # Install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"

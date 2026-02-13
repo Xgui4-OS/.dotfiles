@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## Feb 12 Update : 
+
+- Update environment variables 
+- remove obsolete GTK  and QT configurations
+- temporaly disable hyprlansd config 
+- starship fix
+
 ## Feb 6 Update
 
 - Update Rofi powermenu for non-systemd system
