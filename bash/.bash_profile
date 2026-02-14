@@ -6,11 +6,9 @@
 # shellcheck disable=SC1090
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
-if [ "$XDG_SESSION_TYPE" = "x11" ]; then
-   export MOZ_USE_XINPUT2=1
-   export QT_QPA_PLATFORMTHEME=qt6ct
-   export XDG_MENU_PREFIX=arch
-fi
+export MOZ_USE_XINPUT2=1
+export QT_QPA_PLATFORMTHEME=qt6ct
+export XDG_MENU_PREFIX=arch
 
 export PATH=$HOME/.config/emacs/bin:$PATH
 
@@ -25,3 +23,5 @@ if [ -z "$XDG_RUNTIME_DIR" ]; then
     export XDG_RUNTIME_DIR="/tmp/$(id -u)-runtime"
     mkdir -pm 700 "$XDG_RUNTIME_DIR"
 fi
+
+export PATH=$HOME/.config/emacs/bin:$PATH

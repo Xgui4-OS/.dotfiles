@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## Feb 13 Update : 
+
+- Re-add info to readme
+- fix qtile
+- update readme
+- update bash + profile setup 
+- fix the hyprlock
+- update the plugin of hyprland
+- removed unused spectrwm config
+
+
 ## Feb 12 Update : 
 
 - Update environment variables 

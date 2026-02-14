@@ -19,3 +19,4 @@ hyprland/.config/hypr/monitors.conf
 
 # temporaly until i fix the link of gtk with its assets
 gtk/.config/gtk-4.0/assets
+qtile/.config/qtile/__pycache__/config.cpython-314.pyc
