@@ -24,6 +24,10 @@
             "keyColor": "magenta"
         },
         {
+            "type": "initsystem",
+            "keyColor": "magenta"
+        },
+        {
             "type": "kernel",
             "keyColor": "blue"
         },
@@ -44,7 +48,7 @@
             "keyColor": "38;2;252;148;3"
         },
         {
-            "type": "Theme",
+            "type": "theme",
             "keyColor": "38;2;252;148;3"
         },
         {
@@ -54,7 +58,7 @@
             "keyColor": "38;2;252;148;3"
         },
         {
-            "type": "wmTheme",
+            "type": "wmtheme",
             "keyColor": "38;2;252;148;3"
         },
         {

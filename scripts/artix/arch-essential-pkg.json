@@ -1,7 +1,7 @@
 {
     "pacman" :[
-        "base-devel",
         "git",
+        "base-devel",
         "stow",
         "dolphin",
         "picom",
@@ -14,18 +14,17 @@
         "fish",
         "starship",
         "nerd-fonts",
-        "exa",
-        "ugrep",
+        "eza",
         "bat",
         "brightnessctl",
         "cpio",
         "pkg-config",
-        "g++",
         "gcc",
         "breeze"
     ],
     "aur" : [
         "qt5c-kde",
-        "qt6c-kde"
+        "qt6c-kde",
+        "ugrep-git"
     ]
 }

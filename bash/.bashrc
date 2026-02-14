@@ -1,4 +1,4 @@
-#!/use/bin/env bash
+# shellcheck disable=SC2148
 #
 # ~/.bashrc
 #
@@ -22,3 +22,5 @@ alias wkill='hyprctl kill'
 alias neofetch='fastfetch -c neofetch'
 
 eval "$(bat --completion bash)"
+
+export PATH=$HOME/.config/emacs/bin:$PATH
