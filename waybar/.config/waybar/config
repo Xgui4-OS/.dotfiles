@@ -154,6 +154,6 @@
     "custom/power": {
         "format": "⏻",
         "tooltip": false,
-        "on-click": "rofi -show powermenu:~/.config/hypr/rofi-power-menu"
+        "on-click": "rofi -show powermenu"
     }
 }

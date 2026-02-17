@@ -11,6 +11,8 @@
 #
 # See README.md for more information.
 
+# updated to work on non-systemd system
+
 set -e
 set -u
 
@@ -38,9 +40,9 @@ icons[cancel]="\Uf0156"
 declare -A actions
 actions[lockscreen]="loginctl lock-session ${XDG_SESSION_ID-}"
 actions[logout]="loginctl terminate-session ${XDG_SESSION_ID-}"
-actions[suspend]="systemctl suspend"
-actions[reboot]="systemctl reboot"
-actions[shutdown]="systemctl poweroff"
+actions[suspend]="loginctl suspend"
+actions[reboot]="loginctl reboot"
+actions[shutdown]="loginctl poweroff"
 
 # By default, ask for confirmation for actions that are irreversible
 confirmations=(reboot shutdown logout)

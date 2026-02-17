@@ -1,14 +1,18 @@
 {
     "pacman" : [
-    "hyprland",
-    "waybar",
-    "hyprpaper",
-    "hyprlock",
-    "hypridle",
-    "hyprshot",
-    "swayosd"
+        "hyprland",
+        "waybar",
+        "hyprpaper",
+        "hyprlock",
+        "hypridle",
+        "hyprshot",
+        "swayosd",
+        "hyprpolkitagent",
+        "swaync"
     ],
     "aur" : [
-        "hyprshell"
+        "quickshell-git",
+        "hyprshell",
+        "caelestia-cli"
     ]
 }
