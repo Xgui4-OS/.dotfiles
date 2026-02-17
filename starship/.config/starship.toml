@@ -184,13 +184,13 @@ format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 
 [lua]
 disabled = false
-symbol = ""
+symbol = ""
 style = "bg:green"
 format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 
 [nim]
 disabled = false
-symbol = ""
+symbol = ""
 style = "bg:green"
 format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 
