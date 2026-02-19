@@ -66,7 +66,7 @@ bindsym $mod+space focus mode_toggle
 # run lockscreen
 bindsym $mod+l exec i3lock
 
-# move workspaces between monitors
+# move workspaces between monitors                                                                                                                                                                                                      
 bindsym $mod+b move workspace to output up
 
 # run rofi programs
@@ -89,8 +89,8 @@ bindsym XF86MonBrightnessUp exec brightnessctl s 2+
 bindsym XF86MonBrightnessDown exec brightnessctl s 2-
 
 # audio control
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+ && volume &
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%- && volume &
+bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5
+bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && mute &
 
 # turn off screen

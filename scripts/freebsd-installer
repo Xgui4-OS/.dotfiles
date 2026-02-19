@@ -1,25 +1,60 @@
 #!/bin/sh
 
+set -e
+
+echo "The BSD installer is still in is early stages". 
+
 echo "Preparing installer"
 
 sudo pkg install -y jq
 
-printf "Do you want to install an X11 Server for an X11 Window Manager? (Y/N)"
-read -r confirm_x11
-if [ "$confirm_x11" = "Y" ] || [ "$confirm_x11" = "y" ]; then
-    sudo pkg install -y xorg-server
-fi
+qtile_choosen=0
+i3_choosen=0
 
-# Define the JSON file
-ESSENTIAL="$HOME/.dotfiles/scripts/freebsd/freebsd-essential-pkg.json"
-I3="$HOME/.dotfiles/scripts/freebsd/i3-setup.json"
+printf "Do you want to install i3 ?"
+read -r user_input
+
+if [ "$user_input" = "yes" ] || [ "$user_input" = "Yes" ]; then
+    i3_choosen=1
+fi 
+
+printf "Do you want to install Qtile ?"
+read -r user_input
+
+if [ "$user_input" = "yes" ] || [ "$user_input" = "Yes" ]; then
+    qtile_choosen=1
+fi 
+
+# JSON File location
+ESSENTIAL="$HOME/.dotfiles/scripts/data/freebsd/freebsd-essential-pkg.json"
+I3="$HOME/.dotfiles/scripts/data/freebsd/i3-setup.json"
+QTILE="$HOME/.dotfiles/scripts/data/freebsd/qtile-setup.json"
 
 packages=$(jq -r '.pkg[]' "$ESSENTIAL")
 sudo pkg install -y "$packages"
 
-packages=$(jq -r '.pkg[]' "$I3")
-sudo pkg install -y "$packages"
+if [ "$i3_choosen" = 1 ]; then
+    packages=$(jq -r '.pkg[]' "$I3")
+    sudo pkg install -y "$packages"
+fi 
 
-cd "$HOME/.dotfiles" || echo "[ERROR] : Could not return to $HOME/.dotfiles" && exit 1
+if [ "$qtile_choosen" = 1 ]; then
+    packages=$(jq -r '.pkg[]' "$QTILE")
+    sudo pkg install -y "$packages"
+fi
 
-stow --adopt fastfetch fish gtk i3 kitty libinput-gestures kitty picom polybar qt rofi starship wallpapers xsettings
+cd "$HOME/.dotfiles"
+
+if [ "$qtile_choosen" = 1 ]; then 
+    stow --adopt qtile
+fi
+if [ "$i3_choosen" = 1 ]; then 
+    stow --adopt i3 
+    stow --adopt polybar 
+    stow --adopt picom 
+
+stow --adopt fastfetch 
+stow --adopt fish
+stow --adopt kitty
+stow --adopt rofi
+stow --adopt starship  

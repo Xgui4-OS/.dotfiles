@@ -1,13 +1,31 @@
 # CHANGELOG
 
+## Feb 19 Update
+
+- Backport some changes for polybar from linux to bsd
+- fix the sound keybind for freebsd for i3
+- add paximer for freebsd for the fix of the keybind sound
+- remove the gtk and qt folders as i will found a better to save the theming that work better with stow and that is more flexible. 
+- removed obselete installer
+- removed obselete tools
+- update config for qtile for freebsd and temporaly remove the extras plugins since it is not available on freebsd ports (will look for a alternative or do a path or ports)
+- remove tbd part of readme, as it is was not used for the bsd branch
+- bsckport changes from linux : 
+ - Modify the the whole scripts folder with new subfolders :
+    - data (for the packages list)
+    - assets for file in /usr/share/
+    - utils : wheres tools/utils scripts are located
+- update the installer with qtile dotfiles
+- remove gnome setting and MATE dump text file (will found a better and more modular way later)
+
 ## Backup du jour - 3 feb
 
 - .profile mis a jour
 - ajout du mate
 - dump du dconf de gnome
 
-
 ## 2026/01/20 (bsd-branch) - 17:00
+
 - Remove docker file since docker is not native to BSD
 - Updated the readme with wip info and remove info about docker 
 - Move some themes/colors-schemes files to its own folder : themes
@@ -20,6 +38,7 @@
 - Added a new xgui4-os-dotfiles-version tool to get information 
 
 ## 2026/01/19 (bsd-branch) - 15:30
+
 - Update Fastfetch with information about the dotfiles
 - Updated the VERSION file for better display
 

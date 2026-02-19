@@ -32,7 +32,6 @@ import subprocess
 from libqtile import bar, layout, qtile, widget, hook
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
-from qtile_extras.layout.decorations import GradientBorder, RoundedCorners
 
 mod = "mod4"
 terminal = "kitty"
@@ -145,38 +144,33 @@ for i in groups:
 layouts = [
     layout.Columns(
         border_width=6,
-        border_focus= RoundedCorners(GradientBorder(colours=["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"], # This pushes the border away from the edge so Picom doesn't eat it
-        use_mask=True)),
+        border_focus= "#4c1ecaff",
         paddings=2, # Padding pushes the gradient inward so Picom doesn't clip it
         margin= 4
     ), 
     layout.Max(
         border_width=6,
-        border_focus= RoundedCorners(GradientBorder(colours=["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"], # This pushes the border away from the edge so Picom doesn't eat it
-        use_mask=True)),
+        border_focus= "#4c1ecaff",
         margin= 4
     ),
     layout.Stack(
         num_stacks=2,
         border_width=6,
         paddings=2, # Padding pushes the gradient inward so Picom doesn't clip it
-        border_focus= RoundedCorners(GradientBorder(colours=["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"], # This pushes the border away from the edge so Picom doesn't eat it
-        use_mask=True)),
+        border_focus= "#4c1ecaff",
         margin= 4
     ),
     layout.Bsp(
         border_width=6,
         paddings=2, # Padding pushes the gradient inward so Picom doesn't clip it
-        border_focus= RoundedCorners(GradientBorder(colours=["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"], # This pushes the border away from the edge so Picom doesn't eat it
-        use_mask=True)),
+        border_focus= "#4c1ecaff",
         border_normal="#222222",
         margin= 4
     ),
     layout.Matrix(
         border_width=6,
         paddings=2, # Padding pushes the gradient inward so Picom doesn't clip it
-        border_focus= RoundedCorners(GradientBorder(colours=["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"], # This pushes the border away from the edge so Picom doesn't eat it
-        use_mask=True)),
+        border_focus= "#4c1ecaff",
         border_normal="#000000",
         margin= 4
     ),
@@ -184,56 +178,49 @@ layouts = [
         border_width=6,
         paddings=2, # Padding pushes the gradient inward so Picom doesn't clip it
         border_normal="#000000",
-        border_focus= RoundedCorners(GradientBorder(colours=["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"], # This pushes the border away from the edge so Picom doesn't eat it
-        use_mask=True)),
+        border_focus= "#4c1ecaff",
         margin= 4
     ),
     layout.MonadWide(
         border_width=6,
         paddings=2, # Padding pushes the gradient inward so Picom doesn't clip it
         border_normal="#000000",
-        border_focus= RoundedCorners(GradientBorder(colours=["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"], # This pushes the border away from the edge so Picom doesn't eat it
-        use_mask=True)),
+        border_focus= "#4c1ecaff",
         margin= 4
     ),
     layout.RatioTile(
         border_width=6,
         paddings=2, # Padding pushes the gradient inward so Picom doesn't clip it
         border_normal="#000000",
-        border_focus= RoundedCorners(GradientBorder(colours=["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"], # This pushes the border away from the edge so Picom doesn't eat it
-        use_mask=True)),
+        border_focus= "#4c1ecaff",
         margin= 4
     ),
     layout.Tile(
         border_width=6,
         paddings=2, # Padding pushes the gradient inward so Picom doesn't clip it
         border_normal="#000000",
-        border_focus= RoundedCorners(GradientBorder(colours=["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"], # This pushes the border away from the edge so Picom doesn't eat it
-        use_mask=True)),
+        border_focus= "#4c1ecaff",
         margin= 4
     ),
     layout.TreeTab(
         border_width=6,
         border_normal="#000000",
         paddings=2, # Padding pushes the gradient inward so Picom doesn't clip it
-        border_focus= RoundedCorners(GradientBorder(colours=["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"], # This pushes the border away from the edge so Picom doesn't eat it
-        use_mask=True)),
+        border_focus= "#4c1ecaff", # This pushes the border away from the edge so Picom doesn't eat it
         margin= 4
     ),
     layout.VerticalTile(
         border_width=6,       
         border_normal="#000000",
         paddings=2, # Padding pushes the gradient inward so Picom doesn't clip it
-        border_focus= RoundedCorners(GradientBorder(colours=["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"], # This pushes the border away from the edge so Picom doesn't eat it
-        use_mask=True)),
+        border_focus= "#4c1ecaff", 
         margin= 4
     ),
     layout.Zoomy(
         border_width=6,        
         border_normal="#000000",
         paddings=2, # Padding pushes the gradient inward so Picom doesn't clip it
-        border_focus= RoundedCorners(GradientBorder(colours=["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"], # This pushes the border away from the edge so Picom doesn't eat it
-        use_mask=True)),
+        border_focus= "#4c1ecaff", 
         margin= 4
     ),
 ]
@@ -315,7 +302,7 @@ mouse = [
 ]
 
 dgroups_key_binder = None
-dgroups_app_rules = []  # type: list
+dgroups_app_rules = []  
 follow_mouse_focus = True
 bring_front_click = False
 floats_kept_above = True

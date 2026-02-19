@@ -15,6 +15,7 @@ $c\
 $dotnet\
 $cpp\
 $rust\
+$zig\
 $golang\
 $nodejs\
 $php\
@@ -203,7 +204,9 @@ format = '[[ $symbol( $version)(\(#$virtualenv\)) ](fg:crust bg:green)]($style)'
 
 [zig]
 disabled = false
-symbol = " "
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 
 [docker_context]
 disabled = false

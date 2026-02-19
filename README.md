@@ -28,7 +28,3 @@ My dotfiles of my GNU/Linux System, including HyprArch (my hyprland setup) and i
 git pull
 
 ```
-
-### How to Test/Debug
-
-TBD
