@@ -165,3 +165,4 @@ gaps outer 0
     
 # window rule
 for_window [class=Firefox] border 1
+for_window [class="pavucontrol"] floating enable, move position center

@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Feb 20 Update
+
+- backport windows rule from linux
+- update the readme
+
 ## Feb 19 Update
 
 - Backport some changes for polybar from linux to bsd

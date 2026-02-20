@@ -156,3 +156,6 @@ client.unfocused #343746 #343746 #F8F8F2 #21222C #21222C
 # Set inner/outer gaps
 gaps inner 8
 gaps outer 0
+
+# windows rule
+for_window [class="pavucontrol"] floating enable, move position center
