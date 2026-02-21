@@ -140,7 +140,7 @@ disabled = false
 symbol = ""
 detect_files = ['cpp', 'cc', 'cxx', 'c++', 'hpp', 'hh', 'hxx', 'h++', 'tcc']
 style = "bg:green"
-format = '[[ $symbol( $version) ]](fg:crust bg:green)]($style)'
+format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 
 [rust]
 disabled = false
