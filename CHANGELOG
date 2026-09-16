@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 16 sept part 2
+
+- update dms to latest config location
+- remove ghostfile
+- update flameshot for wayland
+
 ## 16 sept 
 
 - update hyprland
