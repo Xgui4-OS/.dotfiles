@@ -45,7 +45,7 @@
             "rounding": 10,
             "spacing": 0.5806878651919867
         },
-        "wallpaperEnabled": true
+        "wallpaperEnabled": false
     },
     "bar": {
         "clock": {
@@ -123,7 +123,7 @@
             "activeIndicator": true,
             "activeLabel": "󰮯",
             "activeTrail": false,
-            "capitalisation": "preserve",
+            "capitalisation": "Preserve",
             "label": "",
             "occupiedBg": true,
             "occupiedLabel": "",
@@ -416,7 +416,7 @@
     "services": {
         "audioIncrement": 0.1,
         "defaultPlayer": "Spotify",
-        "gpuType": "nvidia",
+        "gpuType": "Nvidia",
         "maxVolume": 1,
         "playerAliases": [
             {
