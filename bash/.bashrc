@@ -23,7 +23,6 @@ alias neofetch="fastfetch -c neofetch"
 alias cmatrix-rainbow="cmatrix | lolcat"
 alias ls="exa --icons=auto"
 alias gls="/usr/bin/ls"
-alias gfind=/usr/bin/find
 
 eval "$(bat --completion bash)"
 
@@ -32,4 +31,10 @@ function md () {
   mkdir -p ~/.cache/md
   markdown "$1" > ~/.cache/md/temp.html
   firefox ~/.cache/md/temp.html
+}
+
+2webp() {
+    for anim ; do
+        ffmpeg -i "${anim}" -loop 0 "${anim%.*}.webp"
+    done
 }

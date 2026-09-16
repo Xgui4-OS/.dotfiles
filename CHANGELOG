@@ -1,8 +1,19 @@
 # CHANGELOG
 
+## 16 sept 
+
+- update hyprland
+- update dms and niri
+- update i3
+- update fastfetch with hyfetch support
+- remade GNU grep the default in bash and fish
+- update the .gitignore file
+
+## Stop updating the CHANGELOG for now
+
 ## June 30
 
-Update wallpapers
+- Update wallpapers
 
 ## June 21
 

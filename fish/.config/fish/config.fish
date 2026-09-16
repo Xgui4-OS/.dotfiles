@@ -15,8 +15,6 @@ if status is-interactive
     alias gcat="/usr/bin/cat"
     alias ls="exa --icons=auto"
     alias gls="/usr/bin/ls"
-    alias grep="ugrep"
-    alias ggrep="/usr/bin/grep"
 
     bat --completion fish | source
 end
@@ -33,4 +31,9 @@ end
 
 function on_exit --on-process %self 
     rm ~/.cache/md/temp.html
+end
+
+function 2webp --description "Any image to webp!"
+    bash 2webp $1
+    fish
 end
