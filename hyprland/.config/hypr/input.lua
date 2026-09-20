@@ -1,10 +1,7 @@
 hl.config({
     input = {
-        kb_layout  = "fr",
-        kb_variant = "ca",
-        kb_model   = "",
-        kb_options = "",
-        kb_rules   = "",
+        kb_layout  = "ca",
+        kb_variant = "fr",
 
         follow_mouse = 1,
 

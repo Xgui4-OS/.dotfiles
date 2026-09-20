@@ -1,8 +1,8 @@
 {
   "matugenTargetMonitor": "HDMI-A-1",
-  "popupTransparency": 0.58,
+  "popupTransparency": 0.34,
   "floatingWindowSyncGlobal": false,
-  "floatingWindowTransparency": 0.7,
+  "floatingWindowTransparency": 0.46,
   "floatingWindowForegroundTransparency": 0.48,
   "widgetBackgroundColor": "s",
   "widgetColorMode": "colorful",
@@ -10,19 +10,91 @@
   "buttonColorMode": "primaryContainer",
   "cornerRadius": 12,
   "mouseNaturalScroll": true,
+  "clockFormat": "24h",
   "animationVariant": 2,
   "foregroundLayerTransparency": 0.2,
   "controlCenterShowMicPercent": true,
+  "controlCenterWidgets": [
+    {
+      "id": "volumeSlider",
+      "enabled": true,
+      "width": 50
+    },
+    {
+      "id": "brightnessSlider",
+      "enabled": true,
+      "width": 50
+    },
+    {
+      "id": "wifi",
+      "enabled": true,
+      "width": 50
+    },
+    {
+      "id": "bluetooth",
+      "enabled": true,
+      "width": 50
+    },
+    {
+      "id": "audioOutput",
+      "enabled": true,
+      "width": 50
+    },
+    {
+      "id": "audioInput",
+      "enabled": true,
+      "width": 50
+    },
+    {
+      "id": "nightMode",
+      "enabled": true,
+      "width": 50
+    },
+    {
+      "id": "darkMode",
+      "enabled": true,
+      "width": 50
+    },
+    {
+      "id": "doNotDisturb",
+      "enabled": true,
+      "width": 50
+    },
+    {
+      "id": "idleInhibitor",
+      "enabled": true,
+      "width": 50
+    },
+    {
+      "id": "battery",
+      "enabled": true,
+      "width": 50
+    },
+    {
+      "id": "builtin_display_profiles",
+      "enabled": true,
+      "width": 50
+    },
+    {
+      "id": "colorPicker",
+      "enabled": true,
+      "width": 50
+    }
+  ],
   "showWorkspaceIndex": true,
   "showWorkspaceName": true,
   "showWorkspaceApps": true,
   "workspaceUnfocusedMonitorSeparateAppearance": true,
   "workspaceUnfocusedMonitorColorMode": "primaryContainer",
+  "mediaUseAlbumArtAccent": true,
+  "appleMusicAnimatedArtEnabled": true,
   "appIdSubstitutions": [],
+  "rememberLastQuery": true,
+  "dankLauncherV2IncludeFilesInAll": true,
+  "dankLauncherV2IncludeFoldersInAll": true,
   "launcherUseOverlayLayer": true,
   "launcherStyle": "island",
   "spotlightBarShowModeChips": true,
-  "iconThemeDark": "Oxygen_Blue",
   "cursorSettings": {
     "theme": "Oxygen_Blue",
     "size": 24,
@@ -44,10 +116,12 @@
   "monoFontFamily": "Hack",
   "useSystemSoundTheme": true,
   "soundLogin": true,
+  "lockBeforeSuspend": true,
   "showDock": true,
   "dockAutoHide": true,
   "dockGroupByApp": true,
   "dockSeparatePinnedAndRunningApps": true,
+  "dockOpenOnOverview": true,
   "dockIsolateDisplays": true,
   "dockLauncherEnabled": true,
   "dockLauncherLogoMode": "os",
@@ -77,13 +151,26 @@
         "weather"
       ],
       "rightWidgets": [
+        {
+          "id": "network_speed_monitor",
+          "enabled": true
+        },
         "systemTray",
         "clipboard",
+        {
+          "id": "cpuTemp",
+          "enabled": true,
+          "minimumWidth": true
+        },
         "cpuUsage",
         "memUsage",
         "notificationButton",
         "battery",
-        "controlCenterButton"
+        "controlCenterButton",
+        {
+          "id": "privacyIndicator",
+          "enabled": true
+        }
       ],
       "spacing": 4,
       "innerPadding": 1,
@@ -133,7 +220,6 @@
       "clickThrough": false,
       "hoverPopouts": true,
       "hoverPopoutDelay": 150,
-      "island": true,
       "islandInteractionMode": "hybrid",
       "islandFloating": false,
       "islandHomeCompactTight": true,
@@ -148,7 +234,37 @@
       "islandSatellitesEnabled": true,
       "islandSatelliteGothCorners": false,
       "islandSatelliteTransparency": 0,
-      "islandHighContrast": false
+      "islandHighContrast": false,
+      "islandHomeLayout": [
+        {
+          "id": "media",
+          "enabled": true
+        },
+        {
+          "id": "clock",
+          "enabled": true
+        },
+        {
+          "id": "weather",
+          "enabled": true
+        },
+        {
+          "id": "status",
+          "enabled": true
+        },
+        {
+          "id": "volume",
+          "enabled": true
+        },
+        {
+          "id": "brightness",
+          "enabled": true
+        },
+        {
+          "id": "notifications",
+          "enabled": true
+        }
+      ]
     }
   ],
   "desktopClockCustomColor": {

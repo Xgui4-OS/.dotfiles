@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 20 sept
+
+- transition wayland to lua., the dotrfiles for hyprland haver some massive changes and is wip 
+- try to fix waybar
+- some minor dms dotfiles changes
+
+
 ## 16 sept part 2
 
 - update dms to latest config location

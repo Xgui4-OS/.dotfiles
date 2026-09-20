@@ -1,5 +1,5 @@
 ########################################################################################
-# HyprArch 0.0.2
+# HyprArch for Caelestia 0.2
 # By Xgui4
 ########################################################################################
 
@@ -21,14 +21,40 @@ $emoji = rofimoji --action copy clipboard # default emoji picker
 $clipboardManager = copyq # defaiut clipboard manager 
 $screenshotUtiliy = hyprshot -m region # default screenshot utility
 
-#################
-### AUTOSTART ###
-#################
+#####################################
+### AUTOSTART FOR CAELESTIA SHELL ###
+#####################################
 
-# source = ~/.config/hypr/autostart.conf
+# Autostart applications for Hyprland
+exec-once = copyq
+exec-once = hyprpm reload
+exec-once = XDG_MENU_PREFIgeoclue-2.0X=arch- kbuildsycoca6
+exec-once = brightnessctl s 100%
+exec-once = flameshot
+exec-once = swayosd-server
+
+# hpyrpolkit agent, for the auth agent, you change choose a other one if you want
+exec-once = /usr/lib/hyprpolkitagent/hyprpolkitagent &
+
+exec-once = qs -c overview
+exec-once = caelestia shell
+# Resize and move windows based on matches (e.g. pip)
+exec-once = caelestia resizer -d
+
+# Location provider and night light
+exec-once = /usr/lib/geoclue-2.0/demos/agent
+exec-once = sleep 1 && gammastep
+
+# Forward bluetooth media commands to MPRIS
+exec-once = mpris-proxy
+
+# Clipboard history
+exec-once = wl-paste --type text --watch cliphist store
+exec-once = wl-paste --type image --watch cliphist store
+# exec-once = gnome-keyring-daemon --start --components=secrets
 
 #############################
-### ENVIRONMENT VARIABLES ###
+### ENVIRONMENT VARIABLES ###k
 #############################
 
 source = ~/.config/hypr/env.conf
@@ -47,6 +73,7 @@ source = ~/.config/hypr/appearence.conf
 
 source =  ~/.config/hypr/input.conf
 
+
 ################
 ## Permission ##
 ################
@@ -58,6 +85,7 @@ source = ~/.config/hypr/permission.conf
 ###################
 
 source = ~/.config/hypr/keybinding.conf
+
 bind =, PRINT, exec, $screenshotUtiliy
 
 ##############################
@@ -76,5 +104,12 @@ xwayland:force_zero_scaling = true
 ## Plugins config ##
 ####################
 
-# temporaly disabled until i found a solution 
 # source = ~/.config/hypr/plugins.conf
+
+###############################
+## Caelestia Specific Config ##
+###############################
+
+# Kill/restart
+bindr = Super+Shift, M, exec, qs -c caelestia kill
+bindr = Super+Shift, rR, exec, qs -c caelestia kill; sleep .1; caelestia shell -d

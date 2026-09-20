@@ -23,7 +23,8 @@
     ],
     
     "hyprland/workspaces": {
-        "format": "{icon}"
+        "format": "{icon}",
+	"separate-outputs": false
     },
     
     "hyprland/window": {
