@@ -1,115 +1,104 @@
-########################################################################################
-# HyprArch for Caelestia 0.2
-# By Xgui4
-########################################################################################
-
-################
-### MONITORS ###
-################
-
-source = ~/.config/hypr/monitors.conf
-
-###################
-### MY PROGRAMS ###
-###################
-
-$terminal = kitty  # default terminal 
-$fileManager = dolphin # default file manager
-$browser = firefox # default browser
-$menu = rofi # default launcher/menu 
-$emoji = rofimoji --action copy clipboard # default emoji picker
-$clipboardManager = copyq # defaiut clipboard manager 
-$screenshotUtiliy = hyprshot -m region # default screenshot utility
-
-#####################################
-### AUTOSTART FOR CAELESTIA SHELL ###
-#####################################
-
-# Autostart applications for Hyprland
-exec-once = copyq
-exec-once = hyprpm reload
-exec-once = XDG_MENU_PREFIgeoclue-2.0X=arch- kbuildsycoca6
-exec-once = brightnessctl s 100%
-exec-once = flameshot
-exec-once = swayosd-server
-
-# hpyrpolkit agent, for the auth agent, you change choose a other one if you want
-exec-once = /usr/lib/hyprpolkitagent/hyprpolkitagent &
-
-exec-once = qs -c overview
-exec-once = caelestia shell
-# Resize and move windows based on matches (e.g. pip)
-exec-once = caelestia resizer -d
-
-# Location provider and night light
-exec-once = /usr/lib/geoclue-2.0/demos/agent
-exec-once = sleep 1 && gammastep
-
-# Forward bluetooth media commands to MPRIS
-exec-once = mpris-proxy
-
-# Clipboard history
-exec-once = wl-paste --type text --watch cliphist store
-exec-once = wl-paste --type image --watch cliphist store
-# exec-once = gnome-keyring-daemon --start --components=secrets
-
-#############################
-### ENVIRONMENT VARIABLES ###k
-#############################
-
-source = ~/.config/hypr/env.conf
-
-source = ~/.config/hypr/nvidia.conf 
-
-#####################
-### LOOK AND FEEL ###
-#####################
-
-source = ~/.config/hypr/appearence.conf
-
-#############
-### INPUT ###
-#############  
-
-source =  ~/.config/hypr/input.conf
+-- ########################################################################################
+-- HyprArch for Caelestia 0.3
+-- By Xgui4
+-- ########################################################################################
 
 
-################
-## Permission ##
-################
+-- MONITORS
 
-source = ~/.config/hypr/permission.conf
+require("monitors")
 
-###################
-### KEYBINDINGS ###
-###################
+-- MY PROGRAMS 
 
-source = ~/.config/hypr/keybinding.conf
+terminal = "kitty" -- default terminal 
+fileManager = "dolphin" -- default file manager
+browser = "firefox" -- default browser
+menu = "rofi" -- default launcher/menu 
+emoji = "rofimoji --action copy clipboard" -- default emoji picker
+clipboardManager = "copyq"-- defaiut clipboard manager 
+screenshotUtiliy = "hyprshot -m region" -- default screenshot utility
 
-bind =, PRINT, exec, $screenshotUtiliy
+--  AUTOSTART FOR CAELESTIA SHELL 
 
-##############################
-### WINDOWS AND WORKSPACES ###
-##############################
+-- Autostart applications for Hyprland
 
-source = ~/.config/hypr/windows-rule.conf
+h1.on("hyprland.start", function()
+    hl.exec_cmd("swayosd-server")
+    hl.exec_cmd("hypridle")
+    hl.exec_cmd("copyq")
+    hl.exec_cmd("hyprpm reload")
+    hl.exec_cmd("XDG_MENU_PREFIX=kde- kbuildsycoca6")
+    hl.exec_cmd("hyprsunset")
+    hl.exec_cmd("/usr/lib/hyprpolkitagent/hyprpolkitagent")
+    hl.exec_cmd("caelestia shell") 
+    h1.exec_cmd("flameshot")
+    h1.exec_cmd("caelestia resizer -d")
+    h1.exec_cmd("sleep 1 && gammastep")
+    h1.exec_cmd("mpris-proxy")
+    h1.exec_cmd("wl-paste --type text --watch cliphist store")
+    h1.exec_cmd("wl-paste --type image --watch cliphist store")
+    h1.exec_cmd("gnome-keyring-daemon --start --components=secrets")
+.end)
 
-##################
-## Fix for apps ##
-##################
+-- ENVIRONMENT VARIABLES 
 
-xwayland:force_zero_scaling = true
+hl.env("XCURSOR_SIZE", "25")
+hl.env("HYPRCURSOR_SIZE", "25")
 
-####################
-## Plugins config ##
-####################
+-- Themes
+hl.env("QT_QPA_PLATFORMTHEME","qt6ct") -- for Qt6 apps
+hl.env("QT_WAYLAND_DISABLE_WINDOWDECORATION", "1")
+hl.env("QT_AUTO_SCREEN_SCALE_FACTOR", "1")
 
-# source = ~/.config/hypr/plugins.conf
+-- Toolkit backends 
+hl.env("GDK_BACKEND", "wayland, x11")
+hl.env("QT_QPA_PLATFORM", "wayland")
+hl.env("SDL_VIDEODRIVER", "wayland, x11, windows")
+hl.env("CLUTTER_BACKEND", "wayland")
+hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
 
-###############################
-## Caelestia Specific Config ##
-###############################
+-- Fix for dolphin 
+hl.env("XDG_MENU_PREFIX","arch-")
 
-# Kill/restart
-bindr = Super+Shift, M, exec, qs -c caelestia kill
-bindr = Super+Shift, rR, exec, qs -c caelestia kill; sleep .1; caelestia shell -d
+-- XDG specifications 
+hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
+hl.env("XDG_SESSION_TYPE", "wayland")
+hl.env("XDG_SESSION_DESKTOP", "Hyprland")
+
+-- Others 
+hl.env("_JAVA_AWT_WM_NONREPARENTING", "1")
+
+require("nvidia")
+
+-- LOOK AND FEEL 
+
+require("appearence")
+
+-- INPUT 
+
+require("input.conf")
+
+-- Permission 
+
+require("permission")
+
+-- KEYBINDINGS
+
+require("keybinding")
+
+hl.bind(mainMod .. " + Print", hl.dsp.exec_cmd(screenshotUtiliy))
+
+-- WINDOWS AND WORKSPACES
+
+require("windows-rule")
+
+-- Fix for apps (not working)
+-- xwayland:force_zero_scaling = true
+
+-- Plugins config 
+
+require("plugins")
+
+-- Caelestia Specific Config 
+
+-- to be readded later, need to  how it work in the new lua config system
