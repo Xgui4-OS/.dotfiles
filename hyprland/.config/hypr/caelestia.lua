@@ -92,8 +92,13 @@ hl.bind(mainMod .. " + Print", hl.dsp.exec_cmd(screenshotUtiliy))
 
 require("windows-rule")
 
--- Fix for apps (not working)
--- xwayland:force_zero_scaling = true
+-- Fix for apps 
+
+hl.config({
+  xwayland = {
+    force_zero_scaling = true
+  }
+})
 
 -- Plugins config 
 
@@ -102,3 +107,7 @@ require("plugins")
 -- Caelestia Specific Config 
 
 -- to be readded later, need to  how it work in the new lua config system
+
+-- Hyprland reload trick
+
+hl.bind("SUPER + SHIFT + R", hl.dsp.exec_cmd("hyprctl reload"))

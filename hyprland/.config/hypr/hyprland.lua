@@ -95,6 +95,7 @@ require("permission")
 
 -- require("keybinding.lua")
 require("keybinding")
+hl.bind("SUPER + TAB", hl.dsp.exec_cmd("qs ipc -c overview call overview toggle"))
 hl.bind("PRINT" .. "", hl.dsp.exec_cmd(screenshotUtiliy))
 
 --------------------------------
@@ -108,11 +109,22 @@ require("windows-rule")
 -- Fix for apps --
 -------------------
 
--- TODO : Find the new synthax
--- xwayland:force_zero_scaling = true
+-- unscale XWayland
+
+hl.config({
+  xwayland = {
+    force_zero_scaling = true
+  }
+})
 
 --------------------
 -- Plugins config --
 ---------------------
 
 -- require("plugins")
+
+-- Reload Hyprland config trick 
+
+-- Exemple de touche pour forcer le reload complet (SUPER + MAJ + R)
+
+hl.bind("SUPER + SHIFT + R", hl.dsp.exec_cmd("hyprctl reload"))
