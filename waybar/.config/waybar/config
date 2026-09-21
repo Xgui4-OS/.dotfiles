@@ -2,6 +2,8 @@
     "layer": "top",
     "position": "top",
     "height": 20,
+    "on-sigusr1": "hide",
+    "on-sigusr2": "show",
     "modules-left": [
         "custom/launcher", 
         "hyprland/workspaces",
@@ -24,7 +26,7 @@
     
     "hyprland/workspaces": {
         "format": "{icon}",
-	"separate-outputs": false
+	    "all-outputs": true
     },
     
     "hyprland/window": {

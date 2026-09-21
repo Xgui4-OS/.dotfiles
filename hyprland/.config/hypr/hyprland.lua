@@ -1,5 +1,5 @@
 ----------------------------------------------------
--- HyprArch 0.1.1 (Lua/Hyprland 0.55 Update)   ----
+-- Hyprland Config For Xgui4-OS 0.1.1 (Lua/Hyprland 0.55 Update)   ----
 --  By Xgui4                                   ----
 ----------------------------------------------------
 
@@ -36,7 +36,8 @@ hl.on("hyprland.start", function ()
     hl.exec_cmd("XDG_MENU_PREFIX=kde- kbuildsycoca6")
     hl.exec_cmd("hyprsunset")
     hl.exec_cmd("/usr/lib/hyprpolkitagent/hyprpolkitagent")
-    hl.exec_cmd("qs -c overview") 
+    hl.exec_cmd("qs -c overview")
+    hl.exec_cmd("sleep 1 &&$HOME/.config/hypr/scripts/waybar_auto_hide &") 
 end)
 
 -------------------------------
@@ -44,7 +45,11 @@ end)
 -------------------------------
 
 hl.env("XCURSOR_SIZE", "25")
+hl.env("XCURSOR_THEME", "Oxygen_Blue")
 hl.env("HYPRCURSOR_SIZE", "25")
+
+hl.env("HYPRCURSOR_THEME", "Oxygen_Blue")
+hl.env("HYPRCURSOR_SIZE", "24")
 
 -- Themes
 hl.env("QT_QPA_PLATFORMTHEME","qt6ct") -- for Qt6 apps
@@ -121,10 +126,8 @@ hl.config({
 -- Plugins config --
 ---------------------
 
--- require("plugins")
+require("plugins")
 
 -- Reload Hyprland config trick 
-
--- Exemple de touche pour forcer le reload complet (SUPER + MAJ + R)
 
 hl.bind("SUPER + SHIFT + R", hl.dsp.exec_cmd("hyprctl reload"))

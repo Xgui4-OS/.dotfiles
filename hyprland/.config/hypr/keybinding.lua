@@ -14,7 +14,9 @@ hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("rofi -show drun"))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(emoji))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("rofi -show run"))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
-hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
+hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
+hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))   -- dwindle only
+hl.bind(mainMod .. " + X", hl.dsp.exec_cmd("rofi -show powermenu")) 
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
@@ -55,14 +57,16 @@ end
 hl.bind(mainMod .. " + Semicolon", hl.dsp.layout("splitratio -0.1"), { repeating = true })
 hl.bind(mainMod .. " + Apostrophe", hl.dsp.layout("splitratio +0.1"), { repeating = true })
 
-hl.bind(mainMod .. " + ALT + Space", hl.dsp.window.float({ action = "toggle" }), { description = "Window: Float/Tile" })
-hl.bind(mainMod .. " + MINUS + F", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }),
+hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.float({ action = "toggle" }), 
+    { description = "Window: Float/Tile" })
+hl.bind(mainMod .. " + CTRL + F", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }), 
     { description = "Window: Maximize" })
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }),
     { description = "Window: Fullscreen" })
-hl.bind(mainMod .. " + ALT + F", hl.dsp.window.fullscreen_state({ internal = 0, client = 3, action = "toggle" }),
+hl.bind(mainMod .. " + ALT + F", hl.dsp.window.fullscreen_state({ internal = 0, client = 3, action = "toggle" }), 
     { description = "Window: Fullscreen spoof" })
-hl.bind(mainMod .. " + P", hl.dsp.window.pin(), { description = "Window: Pin" })
+hl.bind(mainMod .. " + P", hl.dsp.window.pin(),
+     { description = "Window: Pin" })
 
 -- source : https://forum.hypr.land/t/resize-window-with-keyboard/2020
 

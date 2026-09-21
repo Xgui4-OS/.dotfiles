@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 21 sept
+
+- Update Niri and qtile
+- Update Scripts
+- Update Waybar with autohide
+- More keybinds and windows rules for hyprland lua config
+- Fix Hyprlock image
+
 ## 20 sept
 
 - transition wayland to lua., the dotrfiles for hyprland haver some massive changes and is wip 

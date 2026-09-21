@@ -1,7 +1,7 @@
 hl.config({
     plugin = {
         hyprbars = {
-            bar_height = 20,
+            bar_height = 10,
             on_double_click = "hyprctl dispatch fullscreen 1",
         },
     },

@@ -1,5 +1,5 @@
 -- ########################################################################################
--- HyprArch for Caelestia 0.3
+-- Xgui4-OS Hyprland Config for Caelestia 0.3
 -- By Xgui4
 -- ########################################################################################
 
@@ -43,6 +43,12 @@ h1.on("hyprland.start", function()
 -- ENVIRONMENT VARIABLES 
 
 hl.env("XCURSOR_SIZE", "25")
+hl.env("HYPRCURSOR_SIZE", "25")
+
+hl.env("XCURSOR_SIZE", "25")
+hl.env("XCURSOR_THEME", "Oxygen_Blue")
+hl.env("HYPRCURSOR_SIZE", "25")
+hl.env("HYPRCURSOR_THEME", "Oxygen_Blue")
 hl.env("HYPRCURSOR_SIZE", "25")
 
 -- Themes
