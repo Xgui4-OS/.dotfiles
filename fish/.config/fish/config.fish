@@ -1,24 +1,39 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
-    starship init fish | source
+    
+    set current_tty $(tty)
+
+    if string match -q "/dev/pts*" (tty)
+        starship init fish | source
+    end
+
     alias fastfetch-image="fastfetch -c ~/.dotfiles/fastfetch/.config/fastfetch/config-image.jsonc"
-    alias i-use-arch-btw="fastfetch -c ~/.dotfiles/fastfetch/.config//fastfetch/config-image.jsonc --logo arch"
+    alias i-use-artix-btw="fastfetch -c ~/.dotfiles/fastfetch/.config//fastfetch/config-image.jsonc --logo artix"
     alias wkill="hyprctl kill"
     alias neofetch="fastfetch -c neofetch"
     alias cmatrix-rainbow="cmatrix | lolcat"
-    alias cat="bat"
     alias gcat="/usr/bin/cat"
     alias ls="exa --icons=auto"
     alias gls="/usr/bin/ls"
-    alias grep="ugrep"
-    alias ggrep="/usr/bin/grep"
-    alias icat="kitty +kitten icat"
-    alias doom-emacs="doom emacs"
-    alias iscc="wine $HOME/.wine/drive_c/users/xgui4/AppData/Local/Programs/iss/ISCC.exe"
 
     bat --completion fish | source
 end
 
 function mkcd --description "Create a directory and cd into it"
     mkdir -p $argv[1] && cd $argv[1]
+end
+
+function md --description "Create temp.html of the selected markdown file and open it in the browser"
+    mkdir -p ~/.cache/md
+    markdown $argv[1] > ~/.cache/md/temp.html
+    firefox ~/.cache/md/temp.html
+end
+
+function on_exit --on-process %self 
+    rm ~/.cache/md/temp.html
+end
+
+function 2webp --description "Any image to webp!"
+    bash 2webp $1
+    fish
 end

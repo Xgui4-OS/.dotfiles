@@ -1,35 +1,193 @@
 # CHANGELOG
 
+## 21 sept
+
+- Update Niri and qtile
+- Update Scripts
+- Update Waybar with autohide
+- More keybinds and windows rules for hyprland lua config
+- Fix Hyprlock image
+
+## 20 sept
+
+- transition wayland to lua., the dotrfiles for hyprland haver some massive changes and is wip 
+- try to fix waybar
+- some minor dms dotfiles changes
+
+
+## 16 sept part 2
+
+- update dms to latest config location
+- remove ghostfile
+- update flameshot for wayland
+
+## 16 sept 
+
+- update hyprland
+- update dms and niri
+- update i3
+- update fastfetch with hyfetch support
+- remade GNU grep the default in bash and fish
+- update the .gitignore file
+
+## Stop updating the CHANGELOG for now
+
+## June 30
+
+- Update wallpapers
+
+## June 21
+
+- Fix fish to look correct even in tty
+- add md commnd to both bash and fish
+- and remove the alias of cat and bat to fish
+- add some more alias to bash
+
+### Part 2
+
+- minor bash logou correction
+- bash script update
+
+## June 12
+
+- fix Hyprland with SonicDE installed by forcing xwayland
+
+## June 8
+
+- new i use artix btw alias for fastfetch
+- update neovim plugins
+- minor btop update
+
+## June 3
+
+- Removed Vscode and audacious from stow
+- Update lazy nvim and btop configuration
+
+## 22 may
+
+- add more softwares to the dotfiles :
+  - audacious
+  - doom emacs
+  - btop
+  - VScode
+  - DankmaterialShell
+  - gh
+  - zshrc
+- updated gitignore for dms plugins
+
+## 17 May
+
+- fix Polybar
+- fix picom
+
+## 14 May
+
+- added nanorc
+- added more fish alias
+- Part 2 : more fix for hyprland lua and add hyprshutdown as packages
+
+## Hyprland Transition to Lua (May 12)
+
+- Disabled some outdated config or comment it
+- Added Work in progress lua config for Hyprland in its own folder.
+  - Will replace the old config when finished
+- Added lua helper/autocomplemation for the new hyprland lua config for global and vscode
+
+## Before new lua config for hyprland
+
+- some fix for nix
+- new wallpaper
+
+## April 24
+
+- New Wallpaper
+- Add Neovim config
+- New temporaly window rule for my own app for testing
+
+## April 14
+
+- Added runx command for qt x11 fallback for the fish shell as a commmand/alias
+
+## April 12
+
+- Lot of minors update and new version names
+
+## March 13
+
+- Fix polybar
+- Added a session-importer.sh util scropt to import Graphical session
+- Update `readme.md`
+- Update `THANKS.md`
+
+## March 11
+
+- Updated niri config
+- Update polybar and changing the character that was missing and new battery features
+- Updated i3 config with added stop audio button
+
+## Mars 4
+
+- Remove focus ring in niri !
+
+- Update Output
+
+-- Part 2 : update i3 and niri settng
+
+## Mars 1
+
+- Add somes fix for Artix and i3
+
+## Feb 26
+
+- Fix niri by adding xwayland-statellites
+
+## Feb 25
+
+- Added Niri and DMS
+
+## Feb 24 Update
+
+- small update to startship and hyprland
+
+## Feb 17 Part 2 update
+
+- Modify the the whole scripts folder with new subfolders :
+  - data (for the packages list)
+  - assets for file in /usr/share/
+  - utils : wheres tools/utils scripts are located
+  - no sub-folders : script to install/manager the dotfiles
+- Fix the hyprland configs and removes old codes
+- Smalls update to the installers scripts
+- Smalls update to the gitignores
+
 ## Feb 17 Update
 
 - add wine ISCC config
-- fix some starship setting 
+- fix some starship setting
 
-## Feb 13 Update : 
+## Feb 13 Update
 
 - Re-add info to readme
 - fix qtile
 - update readme
-- update bash + profile setup 
+- update bash + profile setup
 - fix the hyprlock
 - update the plugin of hyprland
 - removed unused spectrwm config
 
+## Feb 12 Update
 
-## Feb 12 Update : 
-
-- Update environment variables 
+- Update environment variables
 - remove obsolete GTK  and QT configurations
-- temporaly disable hyprlansd config 
+- temporaly disable hyprlansd config
 - starship fix
 
 ## Feb 6 Update
 
 - Update Rofi powermenu for non-systemd system
 - Update Polybar with WIP Catppuchin Mochiato Color and more features like SWAP
-- Update i3 config to backport some changes from the BSD Branch 
-- Update some i3 config to be more closed to Hyprland 
-
+- Update i3 config to backport some changes from the BSD Branch
+- Update some i3 config to be more closed to Hyprland
 
 ## Feb 5 Update
 
@@ -67,7 +225,7 @@ Update GTK and Hyprland configurations for improved theming and layout adjustmen
 
 - Fix hyprpaper config for including more monitors setups
 
-## Minor changes - 28 January 2026 
+## Minor changes - 28 January 2026
 
 Make bigger gap for hyprland
 
@@ -79,7 +237,7 @@ Add alias for icat in fish config and create get-shell script for caelestia-shel
 
 ## Multiples changes
 
-- Remove screenshots from the main repo since it is no longer on this repo 
+- Remove screenshots from the main repo since it is no longer on this repo
 
 ## Separed the caelestia-shell to a separate github repo (which is a fork of caelestia-dos/shell)
 

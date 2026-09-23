@@ -71,6 +71,7 @@ keys = [
         desc="Toggle between split and unsplit sides of stack",
     ),
     Key([mod], "w", lazy.spawn("rofi -show window"), desc="Launchin Rofi in window mode"),
+    Key([mod, "shift"], "w", lazy.spawn("rofimoji --action copy clipboard"), desc="Launchin Rofimoji in window mode"),
     Key([mod], "d", lazy.spawn("rofi -show drun"), desc="Launchin Rofi in drun mode"),
     Key([mod], "q", lazy.spawn(terminal), desc="Launch terminal"),
     # Toggle between different layouts as defined below
@@ -247,29 +248,29 @@ extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
-        top=bar.Bar(
-            [
-                widget.CurrentLayout(),
-                widget.GroupBox(),
-                widget.Prompt(),
-                widget.WindowName(),
-                widget.Backlight(), 
-                widget.PulseVolume(), 
-                widget.BatteryIcon(), 
-                widget.Battery(foreground='247052', low_percentage=0.20,
-                               low_foreground='fa5e5b', update_delay=10,
-                               format='{percent:.0%}'
-                ),
-                widget.Systray(),
-                widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
-                widget.QuickExit(),
-            ],
-            40,
-             #border_width=[2, 0, 2, 0],  # Draw top and bottom borders
-             #border_color= ["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"]
-        ),
+        # top=bar.Bar(
+        #     [
+        #         widget.CurrentLayout(),
+        #         widget.GroupBox(),
+        #         widget.Prompt(),
+        #         widget.WindowName(),
+        #         widget.Backlight(), 
+        #         widget.PulseVolume(), 
+        #         widget.BatteryIcon(), 
+        #         widget.Battery(foreground='247052', low_percentage=0.20,
+        #                        low_foreground='fa5e5b', update_delay=10,
+        #                        format='{percent:.0%}'
+        #         ),
+        #         widget.Systray(),
+        #         widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
+        #         widget.QuickExit(),
+        #     ],
+        #     40,
+        #      #border_width=[2, 0, 2, 0],  # Draw top and bottom borders
+        #      #border_color= ["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"]
+        # ),
         background="#000000",
-        wallpaper="~/.dotfiles/wallpapers/wallpaper-cirno1.jpeg",
+        wallpaper="~/.dotfiles/wallpapers/touhou/yomu-konpaku.png",
         wallpaper_mode="fill",
         # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
         # By default we handle these events delayed to already improve performance, however your system might still be struggling
@@ -277,28 +278,28 @@ screens = [
         # x11_drag_polling_rate = 60,
     ),    
     Screen(
-        top=bar.Bar(
-            [
-                widget.CurrentLayout(),
-                widget.GroupBox(),
-                widget.Prompt(),
-                widget.WindowName(),
-                # widget.Backlight(),
-                widget.PulseVolume(), 
-                widget.BatteryIcon(),
-                widget.Battery(foreground='247052', low_percentage=0.20,
-                               low_foreground='fa5e5b', update_delay=10,
-                               format='{percent:.0%}'
-                ),
-                widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
-                widget.QuickExit(),
-            ],
-            40,
-             #border_width=[2, 0, 2, 0],  # Draw top and bottom borders
-             #border_color= ["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"]
-        ),
+        # top=bar.Bar(
+        #     [
+        #         widget.CurrentLayout(),
+        #         widget.GroupBox(),
+        #         widget.Prompt(),
+        #         widget.WindowName(),
+        #         # widget.Backlight(),
+        #         widget.PulseVolume(), 
+        #         widget.BatteryIcon(),
+        #         widget.Battery(foreground='247052', low_percentage=0.20,
+        #                        low_foreground='fa5e5b', update_delay=10,
+        #                        format='{percent:.0%}'
+        #         ),
+        #         widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
+        #         widget.QuickExit(),
+        #     ],
+        #     40,
+        #      #border_width=[2, 0, 2, 0],  # Draw top and bottom borders
+        #      #border_color= ["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"]
+        # ),
         background="#000000",
-        wallpaper="~/.dotfiles/wallpapers/wallpaper-cirno2.png",
+        wallpaper="~/.dotfiles/wallpapers/touhou/yomu-konpaku.png",
         wallpaper_mode="fill",
         # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
         # By default we handle these events delayed to already improve performance, however your system might still be struggling

@@ -14,6 +14,7 @@ $git_status\
 $c\
 $dotnet\
 $cpp\
+$cmake\
 $rust\
 $golang\
 $nodejs\
@@ -27,6 +28,8 @@ $lua\
 $python\
 $zig\
 $conda\
+$guix_shell\
+$nix_shell\
 [](fg:green bg:sapphire)\
 $shell\
 [](fg:sapphire bg:lavender)\
@@ -59,8 +62,9 @@ Android = ""
 FreeBSD = "󰣠"
 AOSC = ""
 EndeavourOS = ""
+NixOS=""
 Arch = "󰣇"
-Artix = "󰣇"
+Artix = ""
 CentOS = ""
 Debian = "󰣚"
 Redhat = "󱄛"
@@ -100,6 +104,15 @@ truncation_symbol = "…/"
 "Videos" = " "
 "Vidéos" = " "
 "develop" = " "
+"Projets" = " "
+".github" = " "
+"workflows" = " "
+".git" = " "
+"App" = "󰀻"
+"app" = "󰀻"
+"pkg" = "󰏖 "
+"packages" = "󰏖 "
+"applications" = "󰀻"
 
 [git_branch]
 disabled = false
@@ -122,6 +135,12 @@ format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 disabled = false
 symbol = " "
 detect_files = ["Makefile", "makefile", ".c"]
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+
+[cmake]
+disabled = false
+symbol = " "
 style = "bg:green"
 format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 
@@ -215,9 +234,21 @@ format = '[[ $symbol( $context) ](fg:crust bg:sapphire)]($style)'
 [conda]
 disabled = false
 symbol = "  "
-style = "fg:crust bg:sapphire"
-format = '[$symbol$environment ]($style)'
+style = "fg:black bg:green"
+format = '[via [$symbol$environment]($style)'
 ignore_base = false
+
+[nix_shell]
+disabled = false
+symbol = "󱄅"
+style = "fg:black bg:green"
+format = '[via $symbol $state $name]($style)'
+
+[guix_shell]
+disabled = false
+symbol = ""
+style = "fg:black bg:green"
+format = '[via [$symbol $name]]($style)'
 
 [time]
 disabled = false
@@ -247,13 +278,13 @@ min_time_to_notify = 45000
 
 [shell]
 disabled = false
-fish_indicator = '󰈺 shell'
-powershell_indicator = ''
-bash_indicator = ""
-cmd_indicator = ""
-zsh_indicator = "z"
-xonsh_indicator = "sh"
-unknown_indicator = " unkown"
+fish_indicator = '󰈺 fish'
+powershell_indicator = ' pwsh'
+bash_indicator = " bash"
+cmd_indicator = " cmd"
+zsh_indicator = " zsh"
+xonsh_indicator = " xonsh"
+unknown_indicator = " unknown"
 format='[$indicator]($style)'
 style = "fg:black bg:sapphire"
 
